@@ -1,9 +1,4 @@
-const saludo = "hola mundo";
-
-console.log(saludo);
-
-///****************************************///
-
+//Importo librería
 const libs = require("./libreria");
 
 let total = libs.suma(5,11);
