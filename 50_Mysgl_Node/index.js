@@ -14,12 +14,6 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize('mysql://root:@localhost:3306/acamica');
 
 
-/*
-getBandas().then(resultado=>{
-    console.log(resultado)
-});
-*/
-
 async function getBandas(){
     return await sequelize.query('SELECT * FROM bandas',
         {type: sequelize.QueryTypes.SELECT})

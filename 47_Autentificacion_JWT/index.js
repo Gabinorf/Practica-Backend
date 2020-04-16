@@ -49,3 +49,4 @@ server.get('/privado', validarUser, (request, response) => {
    response.json({msj: 'hola ' + request.user})
 });
 
+//
