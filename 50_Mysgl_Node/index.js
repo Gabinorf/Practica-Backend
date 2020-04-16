@@ -38,11 +38,11 @@ server.get("/bandas", async (req,res)=>{
 });
 
 
-server.post("/canciones", async(res,req)=>{
+server.post("/canciones", async (req,res)=>{
     await sequelize.query("INSERT INTO canciones VALUES (?, ?, ?, ?, ?, ?)",
-        {replacements: [null, "Cancion 1", "3:03", 1, 1 ,"1988-08-23"]})
+        {replacements: [req.body.id, req.body.nombre, req.body.duracion, req.body.album, req.body.banda, req.body.fecha_publicacion]})
         .then(response=>{
-        console.log("se agrego una cancion", response)
+            res.send("se agrego una cancion")
     })
 })
 
